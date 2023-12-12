@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">final</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_tit">编辑</string>
+    <string name="list_tit">列表</string>
+    <string name="mines_tit">我的</string>
+    <string name="stats_tit">统计</string>
+
+
+    <string name="time">当前时间</string>
+    <string name="weather">当前天气</string>
+    <string name="subject">科目/归类</string>
+
+    <string name="feiman">费曼情况</string>
+    <string name="brain_remind">已在大脑中回顾</string>
+    <string name="speak_remind">已经复述/口述讲解</string>
+    <string name="re_think">已经反思</string>
+    <string name="feiman_text">请填写反思感想：内容不全，不是自己的话讲解，结结巴巴，不明白所讲的内容</string>
+
+
+    <string name="kangnaier">康奈尔笔记</string>
+    <string name="reduce">
+        <br>简化(Reduce) :下课以后，尽早将这些论据、概念简明扼要地概括(简化)在线索栏，即副栏。  </br>
+        背诵(Recite) :把主栏遮住，只用线索栏中的关键词提示，尽量完整地叙述课堂上讲过的内容。
+</string>
+    <string name="record">
+        记录(Record) :听讲或阅读过程中，在主栏内尽量多记有意义的论据、概念等内容。
+</string>
+    <string name="refelect">
+        思考(Reflect)：
+        将自己的听课随感、意见、经验体会之类的内容，与讲课内容区分开，写在卡片或笔记本的某一单独部分，
+        加上标题和索引，编制成提纲、摘要，分成类目，并随时归档。
+</string>
+
+
+    <string name="lianxiang">联想记忆法</string>
+    <string name="lianxiang_text">记忆的要点：联想、空间方位、对比、故事、顺口溜等</string>
+
+
+    <string name="aibinhaosi">艾宾浩斯记忆曲线 复习（Review）：每次花十分钟时间快速复习笔记，先看线索栏，适当看笔记栏。</string>
+    <string name="first_review_day">第1天</string>
+    <string name="third_review_day">第3天</string>
+    <string name="seventh_review_day">第7天</string>
+    <string name="forteenth_review_day">第14天</string>
+    <string name="twenty_first_review_day">第21天</string>
+    <string name="thirty_review_day">第30天</string>
+    <string name="zuihou">设置闹钟、手机或者顶部提示</string>
+
+</resources>
