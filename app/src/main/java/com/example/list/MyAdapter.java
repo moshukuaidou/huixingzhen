@@ -135,9 +135,9 @@ public class MyAdapter extends BaseAdapter {
                     buttonClickListener.onButtonClick(position,uniqueId);
                 }
 
+
             }
         });
-
         return convertView;
     }
 

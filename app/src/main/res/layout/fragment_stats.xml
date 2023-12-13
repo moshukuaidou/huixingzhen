@@ -2,12 +2,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stats.stats">
+    tools:context="com.example.mine.mine">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:text="当前笔记数目："
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:textSize="24sp"
+            android:text="第一天复习的条数：" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:textSize="24sp"
+            android:text="第三天复习的条数：" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:textSize="24sp"
+            android:text="第七天复习的条数：" />
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:textSize="24sp"
+            android:text="第十四天复习的条数：" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:text="第二十一天复习的条数："
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="start|center"
+            android:text="第三十天复习的条数："
+            android:textSize="24sp" />
+    </LinearLayout>
 </FrameLayout>

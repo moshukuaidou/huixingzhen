@@ -230,10 +230,7 @@ private void additem(String time,String data,int id){
 if (id==this.mData.get(position).getid()) {
     Cursor cursor = dbhelper.queryById(id);
     if (cursor.moveToFirst()) {
-
-
         temp.setId(cursor.getInt(cursor.getColumnIndexOrThrow("_id")));
-
         temp.setBrain_remind(cursor.getInt(cursor.getColumnIndexOrThrow("brain_remind")));
         temp.setSpeak_remind(cursor.getInt(cursor.getColumnIndexOrThrow("speak_remind")));
         temp.setRe_think(cursor.getInt(cursor.getColumnIndexOrThrow("re_think")));
@@ -248,8 +245,6 @@ if (id==this.mData.get(position).getid()) {
         temp.setReviewDay_14(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_14")));
         temp.setReviewDay_21(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_21")));
         temp.setReviewDay_30(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_30")));
-
-
     }
     cursor.close();
 }else {
