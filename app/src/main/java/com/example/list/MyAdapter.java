@@ -19,7 +19,8 @@ import com.example.huixingzhen.R;
 
 import java.util.Calendar;
 import java.util.LinkedList;
-
+import java.util.UUID;
+import java.util.Random;
 public class MyAdapter extends BaseAdapter {
 
 
@@ -113,15 +114,19 @@ public class MyAdapter extends BaseAdapter {
             public void onClick(View view) {
                 //首先从Data中获取id
                 int uniqueId=  mData.get(position).getid();
+                System.out.println(uniqueId);
                 //id为0说明没插入
                 if(uniqueId==0) {
                     //给按钮生成随机的唯一ID，并给按钮设置id，不给Data设置id，方便后面判断插入数据库
-                    uniqueId=View.generateViewId();
+
+                    uniqueId=generateRandomInt();
                    // mData.get(position).setId(uniqueId);
                     holder.button.setId(uniqueId);
+                    System.out.println(holder.button.getId());
                 }else{
                     //id不为0说明Data有数据，是从数据库里面来的，就要将id和按钮绑定。或者已经创建了，
                     holder.button.setId(uniqueId);
+                    System.out.println(holder.button.getId());
                 }
 
                 System.out.println(uniqueId);
@@ -174,5 +179,9 @@ public class MyAdapter extends BaseAdapter {
 
     }
 
-
+    public static int generateRandomInt() {
+        long timestamp = System.currentTimeMillis();
+        Random random = new Random(timestamp);
+        return random.nextInt(899999999)+100000000;  // 范围可以根据需要调整
+    }
 }

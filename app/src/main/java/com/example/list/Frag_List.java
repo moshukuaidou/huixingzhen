@@ -94,7 +94,7 @@ public class Frag_List extends Fragment  implements MyAdapter.OnButtonClickListe
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        dbhelper= new DbContect(getActivity());
+                dbhelper = new DbContect(getActivity());
         dbhelper.getWritableDatabase();
     }
 
@@ -104,7 +104,7 @@ public class Frag_List extends Fragment  implements MyAdapter.OnButtonClickListe
         // Inflate the layout for this fragment
        contentView = inflater.inflate(R.layout.fragment_list, container, false);
         ListView listView = contentView.findViewById(R.id.list_one);
-        dbhelper.getWritableDatabase();
+
         bindViews();
 //查询
 
@@ -230,18 +230,34 @@ private void additem(String time,String data,int id){
 if (id==this.mData.get(position).getid()) {
     Cursor cursor = dbhelper.queryById(id);
     if (cursor.moveToFirst()) {
+
+
         temp.setId(cursor.getInt(cursor.getColumnIndexOrThrow("_id")));
+
+        temp.setBrain_remind(cursor.getInt(cursor.getColumnIndexOrThrow("brain_remind")));
+        temp.setSpeak_remind(cursor.getInt(cursor.getColumnIndexOrThrow("speak_remind")));
+        temp.setRe_think(cursor.getInt(cursor.getColumnIndexOrThrow("re_think")));
         temp.setFansi(cursor.getString(cursor.getColumnIndexOrThrow("fansi")));
         temp.setjianhuaNeirong(cursor.getString(cursor.getColumnIndexOrThrow("jianhua")));
         temp.setjiluNeirong(cursor.getString(cursor.getColumnIndexOrThrow("jilu")));
         temp.setsikaoNeirong(cursor.getString(cursor.getColumnIndexOrThrow("sikao")));
         temp.setlianxiangNeirong(cursor.getString(cursor.getColumnIndexOrThrow("lianxiang")));
+        temp.setReviewDay_1(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_1")));
+        temp.setReviewDay_3(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_3")));
+        temp.setReviewDay_7(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_7")));
+        temp.setReviewDay_14(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_14")));
+        temp.setReviewDay_21(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_21")));
+        temp.setReviewDay_30(cursor.getInt(cursor.getColumnIndexOrThrow("reviewday_30")));
+
+
     }
     cursor.close();
 }else {
     //不一致说明没插入数据库，直接插入数据库
     this.mData.get(position).setId(id);
+    System.out.println(id);
     dbhelper.insert(mData.get(position).getid(),mData.get(position).getCurTime(),temp);
+
 }
 
         ((edit) editFragment).showFragmentContent(temp);
